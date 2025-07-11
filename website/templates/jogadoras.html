@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}Jogadoras{%endblock%}
+
+{%block content%}
+
+{%for jogadora in jogadoras%}
+
+<div class="album py-5 bg-bg-body-tertiary">
+    <div class="container">
+
+      <div class="row">
+            <div class="col-3">
+                <div class="card shadow-sm bg-dark text-white">
+                    <img src="{% static jogadora.foto %}" class="img-thumbnail" alt="{{ jogadora.nome }}" >
+                    <div class="card-body">
+                        Nome: {{ jogadora.Nome}}<br>
+                        Idade: {{ jogadora.Idade }}<br>
+                        Posição: {{ jogadora.Posicao }}<br >
+                    </div>
+                </div>
+            </div >
+        </div>
+    </div>
+</div>
+{%endfor%}
+{%endblock%}
+
